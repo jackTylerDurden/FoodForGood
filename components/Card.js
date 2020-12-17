@@ -1,26 +1,55 @@
-import React from 'react';
+import React,{useRef,useState,useEffect} from 'react';
 import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 
 import StarRating from './StarRating';
+import  {fetchRestaurantOtherInfo}   from '../Api.js';
 
-const Card = ({itemData, onPress}) => {
-  return (
-    <TouchableOpacity onPress={onPress}>
-      <View style={styles.card}>
-        <View style={styles.cardImgWrapper}>
-          <Image
-            source={itemData.image}
-            resizeMode="cover"
-            style={styles.cardImg}
-          />
-        </View>
-        <View style={styles.cardInfo}>
-          <Text style={styles.cardTitle}>{itemData.title}</Text>
-          <StarRating ratings={itemData.ratings} reviews={itemData.reviews} />
-          <Text numberOfLines={2} style={styles.cardDetails}>{itemData.description}</Text>
-        </View>
-      </View>
-    </TouchableOpacity>
+const Card = ({itemData, onPress}) => {  
+  const[rating,setRating] = useState(0);
+  const[price,setPrice] = useState("");
+  const[imageUrl,setImageUrl] = useState("");
+  const[restaurantUrl,setRestaurantUrl] = useState("");
+  const[noOfReviews,setNoOfReviews] = useState(0);
+  const[showRestaurantCard,setShowRestaurantCard] = useState(false);
+  useEffect(() => {
+    const searchParams = {};
+    searchParams.term = itemData.restaurant_name;
+    searchParams.location = itemData.address.formatted;
+    searchParams.lattitude = itemData.geo.lat;
+    searchParams.longitude = itemData.geo.lon;
+    const searchParamsJSON  = JSON.stringify(searchParams);
+    fetchRestaurantOtherInfo(searchParamsJSON).then((value) => {
+      // console.log('value----->>>',value.businesses[0].name);
+      if(value && value.businesses && value.businesses[0]){
+        const yelpInfo = value.businesses[0];        
+        setRestaurantUrl(yelpInfo.url);
+        setImageUrl(yelpInfo.image_url);
+        itemData.imageUrl = yelpInfo.image_url;
+        setPrice(yelpInfo.price);
+        setRating(yelpInfo.rating);
+        setNoOfReviews(yelpInfo.review_count);
+        setShowRestaurantCard(true);
+      }      
+    });
+  },[])
+  return (    
+    <View>
+      {showRestaurantCard ? (
+        <TouchableOpacity onPress={onPress}>
+          <View style={styles.card}>
+            <View style={styles.cardImgWrapper}>
+              <Image source={{uri : imageUrl}} resizeMode="cover" style={styles.cardImg}/>
+            </View>
+            <View style={styles.cardInfo}>
+              <Text style={styles.cardTitle}>{itemData.restaurant_name}</Text>
+              <StarRating ratings={rating} price={price} reviews={noOfReviews}/>
+              <Text style={styles.cardDetails}>{itemData.restaurant_phone}</Text>          
+              <Text numberOfLines={2} style={styles.cardDetails}>{itemData.address.formatted}</Text>
+            </View>
+          </View>
+        </TouchableOpacity>
+      ) : null}      
+    </View>    
   );
 };
 

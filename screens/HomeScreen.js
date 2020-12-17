@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{useState} from 'react';
+
 import {
   View,
   Text,
@@ -6,164 +7,79 @@ import {
   StyleSheet,
   StatusBar,
   TouchableOpacity,
+  TouchableHighlight,
   ScrollView,
+  TextInput
 } from 'react-native';
 import {useTheme} from '@react-navigation/native';
-
+import  {fetchRestaurants}   from '../Api.js';
 import Swiper from 'react-native-swiper';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import StarRating from '../components/StarRating';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import { FAB } from 'react-native-paper';
+
 
 const HomeScreen = ({navigation}) => {
   const theme = useTheme();
+  const {colors} = useTheme();
+  const[showRefineMenu,setShowRefineMenu] = useState(false);
+  const[restaurantName,setRestaurantName] = useState("");
+  const[stateCode,setStateCode] = useState("");
+  const[city,setCity] = useState("");
+  const[zip,setZip] = useState("");  
+  const getRestaurants = () =>{
+    console.log('clicked on restaurants');        
+    const searchParams = {};
+    searchParams.name = restaurantName;
+    searchParams.state = stateCode.toUpperCase();
+    searchParams.city = city;
+    searchParams.zip = zip;            
+    navigation.navigate('CardListScreen', {title: 'Restaurant',searchParamsJSON:JSON.stringify(searchParams)});    
+  }
 
+  const showHideRefineMenu = () => {    
+    setShowRefineMenu(!showRefineMenu);
+  }
+
+  const setSearchParams = (key,val) => {
+    console.log('key---->>>',key);
+    console.log('val---->>>',val);    
+  }
   return (
     <ScrollView style={styles.container}>
-      <StatusBar barStyle={theme.dark ? 'light-content' : 'dark-content'} />
-      <View style={styles.sliderContainer}>
-        <Swiper
-          autoplay
-          horizontal={false}
-          height={200}
-          activeDotColor="#FF6347">
-          <View style={styles.slide}>
-            <Image
-              source={require('../assets/banners/food-banner1.jpg')}
-              resizeMode="cover"
-              style={styles.sliderImage}
-            />
-          </View>
-          <View style={styles.slide}>
-            <Image
-              source={require('../assets/banners/food-banner2.jpg')}
-              resizeMode="cover"
-              style={styles.sliderImage}
-            />
-          </View>
-          <View style={styles.slide}>
-            <Image
-              source={require('../assets/banners/food-banner3.jpg')}
-              resizeMode="cover"
-              style={styles.sliderImage}
-            />
-          </View>
-        </Swiper>
-      </View>
-
-      <View style={styles.categoryContainer}>
-        <TouchableOpacity
-          style={styles.categoryBtn}
-          onPress={() =>
-            navigation.navigate('CardListScreen', {title: 'Restaurant'})
-          }>
-          <View style={styles.categoryIcon}>
-            <Ionicons name="ios-restaurant" size={35} color="#FF6347" />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Restaurant</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.categoryBtn}
-          onPress={() =>
-            navigation.navigate('CardListScreen', {title: 'Fastfood Center'})
-          }>
-          <View style={styles.categoryIcon}>
-            <MaterialCommunityIcons
-              name="food-fork-drink"
-              size={35}
-              color="#FF6347"
-            />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Fastfood Center</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
-          <View style={styles.categoryIcon}>
-            <MaterialCommunityIcons name="food" size={35} color="#FF6347" />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Snacks Corner</Text>
-        </TouchableOpacity>
-      </View>
-      <View style={[styles.categoryContainer, {marginTop: 10}]}>
-        <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
-          <View style={styles.categoryIcon}>
-            <Fontisto name="hotel" size={35} color="#FF6347" />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Hotels</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
-          <View style={styles.categoryIcon}>
-            <Ionicons name="md-restaurant" size={35} color="#FF6347" />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Dineouts</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
-          <View style={styles.categoryIcon}>
-            <MaterialIcons name="expand-more" size={35} color="#FF6347" />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Show More</Text>
-        </TouchableOpacity>
-      </View>
-
+      <StatusBar barStyle={theme.dark ? 'light-content' : 'dark-content'} />            
       <View style={styles.cardsWrapper}>
-        <Text
-          style={{
-            alignSelf: 'center',
-            fontSize: 18,
-            fontWeight: 'bold',
-            color: '#333',
-          }}>
-          Recently Viewed
-        </Text>
-        <View style={styles.card}>
-          <View style={styles.cardImgWrapper}>
-            <Image
-              source={require('../assets/banners/food-banner2.jpg')}
-              resizeMode="cover"
-              style={styles.cardImg}
+        <View style={styles.action}>
+          <FontAwesome name="search" color={colors.text} size={20} />
+            <TextInput value={restaurantName} onChangeText={(value) => setRestaurantName(value)} placeholder="Restaurants" placeholderTextColor="#666666" autoCorrect={false}
+              style={[
+                styles.textInput,
+                {
+                  color: colors.text,
+                },
+              ]}
             />
-          </View>
-          <View style={styles.cardInfo}>
-            <Text style={styles.cardTitle}>Amazing Food Place</Text>
-            <StarRating ratings={4} reviews={99} />
-            <Text style={styles.cardDetails}>
-              Amazing description for this amazing place
-            </Text>
-          </View>
+            <TouchableHighlight onPress={()=>showHideRefineMenu()}>
+              <View>                
+                <FontAwesome name="sliders" style={{alignSelf: 'center'}} color={colors.text} size={20} />
+                <Text>Refine</Text>
+              </View>
+            </TouchableHighlight>            
         </View>
-        <View style={styles.card}>
-          <View style={styles.cardImgWrapper}>
-            <Image
-              source={require('../assets/banners/food-banner3.jpg')}
-              resizeMode="cover"
-              style={styles.cardImg}
-            />
-          </View>
-          <View style={styles.cardInfo}>
-            <Text style={styles.cardTitle}>Amazing Food Place</Text>
-            <StarRating ratings={4} reviews={99} />
-            <Text style={styles.cardDetails}>
-              Amazing description for this amazing place
-            </Text>
-          </View>
-        </View>
-        <View style={styles.card}>
-          <View style={styles.cardImgWrapper}>
-            <Image
-              source={require('../assets/banners/food-banner4.jpg')}
-              resizeMode="cover"
-              style={styles.cardImg}
-            />
-          </View>
-          <View style={styles.cardInfo}>
-            <Text style={styles.cardTitle}>Amazing Food Place</Text>
-            <StarRating ratings={4} reviews={99} />
-            <Text style={styles.cardDetails}>
-              Amazing description for this amazing place
-            </Text>
-          </View>
-        </View>
+        {showRefineMenu ? (
+          <View style={styles.card}>
+            <View style={styles.cardImgWrapper}>
+              <TextInput placeholder="State" value={stateCode} onChangeText={(value) => {setStateCode(value)}} placeholderTextColor="#666666" autoCorrect={false} style={[styles.textInput,{color: colors.text,},]}/>
+              <TextInput placeholder="City" value={city} onChangeText={(value) => {setCity(value)}} placeholderTextColor="#666666" autoCorrect={false} style={[styles.textInput,{color: colors.text,},]}/>
+              <TextInput keyboardType={'numeric'} value={zip} placeholder="Zip Code" onChangeText={(value) => {setZip(value)}} placeholderTextColor="#666666" autoCorrect={false} style={[styles.textInput,{color: colors.text,},]}/> 
+            </View>
+          </View>         
+        ):null}                
+        <FAB style={styles.fab}  label="Let's Hunt Yo Food!" onPress={() => getRestaurants()}/>
       </View>
     </ScrollView>
   );
@@ -268,5 +184,19 @@ const styles = StyleSheet.create({
   cardDetails: {
     fontSize: 12,
     color: '#444',
+  },
+  textInput: {
+    flex: 1,
+    marginTop: Platform.OS === 'ios' ? 0 : -12,
+    paddingLeft: 10,
+    color: '#05375a',
+  },
+  action: {
+    flexDirection: 'row',
+    marginTop: 10,
+    marginBottom: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#f2f2f2',
+    paddingBottom: 5,
   },
 });
