@@ -24,9 +24,9 @@ const Card = ({itemData, onPress}) => {
         setRestaurantUrl(yelpInfo.url);
         setImageUrl(yelpInfo.image_url);
         itemData.imageUrl = yelpInfo.image_url;
-        setPrice(yelpInfo.price);
-        setRating(yelpInfo.rating);
-        setNoOfReviews(yelpInfo.review_count);
+        setPrice(yelpInfo.price ? yelpInfo.price : "0");
+        setRating(yelpInfo.rating ? yelpInfo.rating : "0");
+        setNoOfReviews(yelpInfo.review_count ? yelpInfo.review_count : 0);
         setShowRestaurantCard(true);
       }      
     });

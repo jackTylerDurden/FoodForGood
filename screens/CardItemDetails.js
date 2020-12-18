@@ -1,5 +1,5 @@
 import React, {useRef} from 'react';
-import {
+import {  
   View,
   Text,
   Image,
@@ -7,6 +7,7 @@ import {
   Dimensions,
   StatusBar,
   Platform,
+  ScrollView
 } from 'react-native';
 import HeaderImageScrollView, {
   TriggeringView,
@@ -26,7 +27,7 @@ const CardItemDetails = ({navigation, route}) => {
   const navTitleView = useRef(null);
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <StatusBar barStyle="light-content" />
       <HeaderImageScrollView
         maxHeight={MAX_HEIGHT}
@@ -49,7 +50,7 @@ const CardItemDetails = ({navigation, route}) => {
         )}>        
         <Menu menuVal={itemData.menus} navigation={navigation}/>               
       </HeaderImageScrollView>
-    </View>
+    </ScrollView>
   );
 };
 

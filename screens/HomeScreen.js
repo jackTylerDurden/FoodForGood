@@ -2,26 +2,17 @@ import React,{useState} from 'react';
 
 import {
   View,
-  Text,
-  Image,
-  StyleSheet,
-  StatusBar,
-  TouchableOpacity,
+  Text,  
+  StyleSheet,  
+  StatusBar,  
   TouchableHighlight,
   ScrollView,
-  TextInput
+  TextInput,
 } from 'react-native';
 import {useTheme} from '@react-navigation/native';
-import  {fetchRestaurants}   from '../Api.js';
-import Swiper from 'react-native-swiper';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Fontisto from 'react-native-vector-icons/Fontisto';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import StarRating from '../components/StarRating';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { FAB } from 'react-native-paper';
-// import {Picker} from '@react-native-picker/picker';
+
 
 const HomeScreen = ({navigation}) => {
   const theme = useTheme();
@@ -30,10 +21,10 @@ const HomeScreen = ({navigation}) => {
   const[restaurantName,setRestaurantName] = useState("");
   const[stateCode,setStateCode] = useState("");
   const[city,setCity] = useState("");
-  const[zip,setZip] = useState("");  
+  const[zip,setZip] = useState("");
   const getRestaurants = () =>{
-    console.log('clicked on restaurants');
-    isLoading = true;
+    const usStates = require('../assets/USState.json');
+    console.log('clicked on restaurants');    
     const searchParams = {};
     searchParams.name = restaurantName;
     searchParams.state = stateCode.toUpperCase();
@@ -41,16 +32,24 @@ const HomeScreen = ({navigation}) => {
     searchParams.zip = zip;            
     navigation.navigate('CardListScreen', {title: 'Restaurant',searchParamsJSON:JSON.stringify(searchParams)});    
   }
+  let data = [{
+    value: 'Banana',
+  }, {
+    value: 'Mango',
+  }, {
+    value: 'Pear',
+  }];
+   
 
   const showHideRefineMenu = () => {    
     setShowRefineMenu(!showRefineMenu);
   }
-
-  const setSearchParams = (key,val) => {
-    console.log('key---->>>',key);
-    console.log('val---->>>',val);    
-  }
-  return (
+  const options = [
+    'one', 'two', 'three'
+  ];
+  const defaultOption = options[0];
+  
+  return (    
     <ScrollView style={styles.container}>
       <StatusBar barStyle={theme.dark ? 'light-content' : 'dark-content'} />            
       <View style={styles.cardsWrapper}>
@@ -74,7 +73,7 @@ const HomeScreen = ({navigation}) => {
         {showRefineMenu ? (
           <View style={styles.card}>
             <View style={styles.cardImgWrapper}>             
-            <TextInput placeholder="State" value={stateCode} onChangeText={(value) => {setStateCode(value)}} placeholderTextColor="#666666" autoCorrect={false} style={[styles.textInput,{color: colors.text,},]}/>
+              <TextInput placeholder="State Code" value={stateCode} onChangeText={(value) => {setStateCode(value)}} placeholderTextColor="#666666"  autoCorrect={false} style={[styles.textInput,{color: colors.text,},]}/>                            
               <TextInput placeholder="City" value={city} onChangeText={(value) => {setCity(value)}} placeholderTextColor="#666666" autoCorrect={false} style={[styles.textInput,{color: colors.text,},]}/>
               <TextInput keyboardType={'numeric'} value={zip} placeholder="Zip Code" onChangeText={(value) => {setZip(value)}} placeholderTextColor="#666666" autoCorrect={false} style={[styles.textInput,{color: colors.text,},]}/> 
             </View>

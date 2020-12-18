@@ -19,7 +19,7 @@ export const fetchRestaurantOtherInfo = async (paramsJSON) => {
       searchString += '&longitude='+params.longitude;
     }
     let yelpfinalEndPoint = yelpEndPoint +'search'+searchString;
-    console.log('yelpFinalEndpoint----->>>',yelpfinalEndPoint)
+    // console.log('yelpFinalEndpoint----->>>',yelpfinalEndPoint)
     try {
       let response = await fetch(yelpfinalEndPoint,{
         method:'GET',
@@ -35,7 +35,7 @@ export const fetchRestaurantOtherInfo = async (paramsJSON) => {
 
 export const fetchRestaurants = async (paramsJSON) =>{    
   const params = JSON.parse(paramsJSON);
-  console.log('params---->>>',params);
+  // console.log('params---->>>',params);
     let searchString = '';
     if(params.zip){
       searchString += '?zip_code='+params.zip;
@@ -50,7 +50,7 @@ export const fetchRestaurants = async (paramsJSON) =>{
       searchString += '&city='+params.city;
     }    
     let finalEndpoint = documenuEndpoint + '/restaurants/search/fields'+ searchString+'&fullmenu=true';//+'&exact=false';    
-    console.log('finalEndpoint----->>>',finalEndpoint)
+    // console.log('finalEndpoint----->>>',finalEndpoint)
     try {      
       let response = await fetch(finalEndpoint,{
         method:'GET',
