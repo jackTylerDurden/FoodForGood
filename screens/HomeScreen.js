@@ -21,7 +21,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import StarRating from '../components/StarRating';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { FAB } from 'react-native-paper';
-
+// import {Picker} from '@react-native-picker/picker';
 
 const HomeScreen = ({navigation}) => {
   const theme = useTheme();
@@ -32,7 +32,8 @@ const HomeScreen = ({navigation}) => {
   const[city,setCity] = useState("");
   const[zip,setZip] = useState("");  
   const getRestaurants = () =>{
-    console.log('clicked on restaurants');        
+    console.log('clicked on restaurants');
+    isLoading = true;
     const searchParams = {};
     searchParams.name = restaurantName;
     searchParams.state = stateCode.toUpperCase();
@@ -72,8 +73,8 @@ const HomeScreen = ({navigation}) => {
         </View>
         {showRefineMenu ? (
           <View style={styles.card}>
-            <View style={styles.cardImgWrapper}>
-              <TextInput placeholder="State" value={stateCode} onChangeText={(value) => {setStateCode(value)}} placeholderTextColor="#666666" autoCorrect={false} style={[styles.textInput,{color: colors.text,},]}/>
+            <View style={styles.cardImgWrapper}>             
+            <TextInput placeholder="State" value={stateCode} onChangeText={(value) => {setStateCode(value)}} placeholderTextColor="#666666" autoCorrect={false} style={[styles.textInput,{color: colors.text,},]}/>
               <TextInput placeholder="City" value={city} onChangeText={(value) => {setCity(value)}} placeholderTextColor="#666666" autoCorrect={false} style={[styles.textInput,{color: colors.text,},]}/>
               <TextInput keyboardType={'numeric'} value={zip} placeholder="Zip Code" onChangeText={(value) => {setZip(value)}} placeholderTextColor="#666666" autoCorrect={false} style={[styles.textInput,{color: colors.text,},]}/> 
             </View>

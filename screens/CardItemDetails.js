@@ -20,7 +20,7 @@ import Menu from '../screens/Menu';
 const MIN_HEIGHT = Platform.OS === 'ios' ? 90 : 55;
 const MAX_HEIGHT = 350;
 
-const CardItemDetails = ({route}) => {
+const CardItemDetails = ({navigation, route}) => {
   const itemData = route.params.itemData;
   console.log('itemData-------->>>',itemData.menus);
   const navTitleView = useRef(null);
@@ -47,23 +47,7 @@ const CardItemDetails = ({route}) => {
             <Text style={styles.navTitle}>{itemData.restaurant_name}</Text>
           </Animatable.View>
         )}>        
-        <Menu menuVal={itemData.menus}/>
-        {/* <View style={[styles.section, {height: 250}]}>
-          <MapView
-            provider={PROVIDER_GOOGLE}
-            style={{flex: 1}}
-            region={{
-              latitude: itemData.geo.lat,
-              longitude: itemData.geo.lon,
-              latitudeDelta: 0.00864195044303443,
-              longitudeDelta: 0.000142817690068,
-            }}>
-            <MapView.Marker
-              coordinate={itemData.geo}
-              image={require('../assets/map_marker.png')}
-            />
-          </MapView>
-        </View> */}        
+        <Menu menuVal={itemData.menus} navigation={navigation}/>               
       </HeaderImageScrollView>
     </View>
   );

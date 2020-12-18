@@ -18,8 +18,7 @@ const Card = ({itemData, onPress}) => {
     searchParams.lattitude = itemData.geo.lat;
     searchParams.longitude = itemData.geo.lon;
     const searchParamsJSON  = JSON.stringify(searchParams);
-    fetchRestaurantOtherInfo(searchParamsJSON).then((value) => {
-      // console.log('value----->>>',value.businesses[0].name);
+    fetchRestaurantOtherInfo(searchParamsJSON).then((value) => {      
       if(value && value.businesses && value.businesses[0]){
         const yelpInfo = value.businesses[0];        
         setRestaurantUrl(yelpInfo.url);
@@ -33,7 +32,7 @@ const Card = ({itemData, onPress}) => {
     });
   },[])
   return (    
-    <View>
+    <View key={itemData.restaurant_id}>
       {showRestaurantCard ? (
         <TouchableOpacity onPress={onPress}>
           <View style={styles.card}>

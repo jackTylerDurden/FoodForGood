@@ -1,10 +1,49 @@
-import * as React from 'react';
-import { List } from 'react-native-paper';
+import React,{useState,useEffect} from 'react';
+import { List,FAB } from 'react-native-paper';
 import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
-const Menu = ({menuVal}) => {
+import Counter from "react-native-counters";
+const Menu = ({menuVal,navigation}) => {
   const menuList = menuVal[0];
-  return(      
+  const [totalPrice,setTotalPrice] = useState(0);
+  const [cartItemsJSON, setCartItems] = useState("[]");  
+
+  useEffect(() => {
+    let newTotalPrice  = 0;
+    const cartItems = JSON.parse(cartItemsJSON);
+      for(var i=0;i<cartItems.length;i++){
+        var item = cartItems[i];
+        newTotalPrice += item.price * item.quantity;
+      }      
+      setTotalPrice(newTotalPrice);      
+  },[cartItemsJSON]);
+
+  const goToCheckout = () => {    
+    navigation.navigate('CheckoutScreen', {orderJSON: cartItemsJSON,totalPrice:totalPrice});    
+  }
+  const addToCart = (quantity,menuItem) => {            
+      menuItem.quantity = quantity;
+      let newCartItems = JSON.parse(cartItemsJSON);
+      var itemFound = false;
+      for(var i=0;i<newCartItems.length;i++){
+        var item = newCartItems[i];
+        if(item.name === menuItem.name){
+          itemFound = true;
+          item.quantity = menuItem.quantity;
+          if(quantity == 0){
+            newCartItems.splice(i,1);
+          }else{
+            newCartItems.splice(i,1,item);
+          }          
+        }
+      }
+      if(!itemFound)
+        newCartItems.push(menuItem);
+      const newCartItemsJSON = JSON.stringify(newCartItems);
+      setCartItems(newCartItemsJSON);
+  }
+  
+  return(   
+    <View>
     <List.Section title="Menu">{
     menuList.menu_sections.map((menuSection,index) => {      
       return (           
@@ -13,17 +52,21 @@ const Menu = ({menuVal}) => {
               menuSection.menu_items.map((menuItem,index) =>{
                  return (
                   <View key={index+'item'} style={styles.cardInfo}>
-                    <View >
+                    <View>
                       <Text style={styles.cardTitle}>{menuItem.name}</Text>
                       <Text numberOfLines={2} style={styles.cardDetails}>{menuItem.description}</Text>
                       <Text style={styles.price}>$ {menuItem.price}</Text>
-                    </View>
+                      <Counter start={0} onChange={(value) => addToCart(value,menuItem)} />
+                    </View>                    
                   </View>)})
             }
             </List.Accordion>            
               )            
           })
-        }</List.Section>                           
+        }</List.Section>                                   
+      <FAB style={styles.fab} label="Checkout" onPress={() => goToCheckout()}/> 
+      <Text>{"\n"}</Text> 
+      </View>
       )      
   }
 export default Menu;

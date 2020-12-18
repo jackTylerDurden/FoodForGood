@@ -23,7 +23,7 @@ const StarRating = (props) => {
     }
 
     for(var i=0;i<props.price.length;i++){
-        price.push((<FontAwesome name="usd"style={styles.star} size={15} />));
+        price.push((<FontAwesome name="usd"style={styles.star} size={15} key={i} />));
     }
 
     return (

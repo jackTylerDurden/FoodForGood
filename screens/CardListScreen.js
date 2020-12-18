@@ -1,11 +1,17 @@
 import React,{useRef,useState,useEffect} from 'react';
-import { View, Text, Button, FlatList,Title, StyleSheet } from 'react-native';
+import { View, Text, Button, FlatList,Title, StyleSheet,ActivityIndicator} from 'react-native';
 import Card from '../components/Card';
 import  {fetchRestaurants}   from '../Api.js';
 
 const CardListScreen = ({navigation,route}) => {    
     const searchParams = route.params.searchParamsJSON; 
+    
     const [restaurantList,setRestaurantList] = useState([]);
+    const [isLoading,setIsLoading] = useState(true);
+    useEffect(() =>{      
+      setIsLoading(false);
+    },[restaurantList]);
+
     useEffect(() => {
       fetchRestaurants(searchParams).then((value) => {        
         var restList = value.data;
@@ -16,7 +22,8 @@ const CardListScreen = ({navigation,route}) => {
         }
         setRestaurantList(restList);        
       });    
-    },[]);    
+    },[]);
+
     const renderItem = ({item}) => {      
         return (
             <Card itemData={item} onPress={()=> navigation.navigate('CardItemDetails', {itemData: item})}
@@ -24,14 +31,14 @@ const CardListScreen = ({navigation,route}) => {
         );
     };
 
-    return (
+    return (    
       <View style={styles.container}>
-        { <FlatList 
-            data={restaurantList}
-            renderItem={renderItem}
-            keyExtractor={item => item.restaurant_id}
-        /> }
-      </View>
+      { <FlatList 
+          data={restaurantList}
+          renderItem={renderItem}
+          keyExtractor={item => item.restaurant_id}
+      /> }
+    </View>        
     );
 };
 

@@ -18,6 +18,7 @@ import {View} from 'react-native-animatable';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import CardListScreen from './CardListScreen';
 import CardItemDetails from './CardItemDetails';
+import CheckoutScreen from './CheckoutScreen';
 
 const HomeStack = createStackNavigator();
 const NotificationStack = createStackNavigator();
@@ -144,6 +145,17 @@ const HomeStackScreen = ({navigation}) => {
       <HomeStack.Screen 
         name="CardItemDetails"
         component={CardItemDetails}
+        options={({route}) => ({
+          // title: route.params.title,
+          headerBackTitleVisible: false,
+          headerTitle: false,
+          headerTransparent: true,
+          headerTintColor: '#fff'
+        })}
+      />
+      <HomeStack.Screen 
+        name="CheckoutScreen"
+        component={CheckoutScreen}
         options={({route}) => ({
           // title: route.params.title,
           headerBackTitleVisible: false,
