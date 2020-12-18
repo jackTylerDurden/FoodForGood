@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react';
-import { List,FAB,Portal } from 'react-native-paper';
-import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
+import { List,FAB,Portal,Paragraph,Text} from 'react-native-paper';
+import {View, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import Counter from "react-native-counters";
 const Menu = ({menuVal,navigation}) => {
   const menuList = menuVal[0];
@@ -53,7 +53,8 @@ const Menu = ({menuVal,navigation}) => {
                   <View key={index+'item'} style={styles.cardInfo}>
                     <View>
                       <Text style={styles.cardTitle}>{menuItem.name}</Text>
-                      <Text numberOfLines={2} style={styles.cardDetails}>{menuItem.description}</Text>
+                      {/* <Text numberOfLines={2} style={styles.cardDetails}>{menuItem.description}</Text> */}
+                      <Paragraph>{menuItem.description}</Paragraph>
                       <Text style={styles.price}>$ {menuItem.price}</Text>
                       <Counter start={0} onChange={(value) => addToCart(value,menuItem)} />
                     </View>                    
