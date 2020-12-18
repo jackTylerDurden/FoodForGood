@@ -38,7 +38,7 @@ export const fetchRestaurants = async (paramsJSON) =>{
   // console.log('params---->>>',params);
     let searchString = '';
     if(params.zip){
-      searchString += '?zip_code='+params.zip;
+      searchString += '&zip_code='+params.zip;
     }
     if(params.state){
       searchString += '&state='+params.state;
@@ -49,8 +49,8 @@ export const fetchRestaurants = async (paramsJSON) =>{
     if(params.city){
       searchString += '&city='+params.city;
     }    
-    let finalEndpoint = documenuEndpoint + '/restaurants/search/fields'+ searchString+'&fullmenu=true';//+'&exact=false';    
-    // console.log('finalEndpoint----->>>',finalEndpoint)
+    let finalEndpoint = documenuEndpoint + '/restaurants/search/fields?init=1'+ searchString+'&fullmenu=true';//+'&exact=false';    
+    console.log('finalEndpoint----->>>',finalEndpoint)
     try {      
       let response = await fetch(finalEndpoint,{
         method:'GET',

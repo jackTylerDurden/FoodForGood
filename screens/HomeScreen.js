@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import {useTheme} from '@react-navigation/native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import { FAB } from 'react-native-paper';
+import { FAB,Portal } from 'react-native-paper';
 
 
 const HomeScreen = ({navigation}) => {
@@ -32,13 +32,7 @@ const HomeScreen = ({navigation}) => {
     searchParams.zip = zip;            
     navigation.navigate('CardListScreen', {title: 'Restaurant',searchParamsJSON:JSON.stringify(searchParams)});    
   }
-  let data = [{
-    value: 'Banana',
-  }, {
-    value: 'Mango',
-  }, {
-    value: 'Pear',
-  }];
+  
    
 
   const showHideRefineMenu = () => {    
@@ -78,8 +72,8 @@ const HomeScreen = ({navigation}) => {
               <TextInput keyboardType={'numeric'} value={zip} placeholder="Zip Code" onChangeText={(value) => {setZip(value)}} placeholderTextColor="#666666" autoCorrect={false} style={[styles.textInput,{color: colors.text,},]}/> 
             </View>
           </View>         
-        ):null}                
-        <FAB style={styles.fab}  label="Let's Hunt Yo Food!" onPress={() => getRestaurants()}/>
+        ):null}        
+          <FAB style={styles.fab}  label="Let's Hunt Yo Food!" onPress={() => getRestaurants()}/>        
       </View>
     </ScrollView>
   );
@@ -198,5 +192,11 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#f2f2f2',
     paddingBottom: 5,
+  },
+  fab: {
+    position: 'relative',
+    margin: 16,
+    right: 0,
+    bottom: 0,
   },
 });

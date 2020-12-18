@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import { List,FAB } from 'react-native-paper';
+import { List,FAB,Portal } from 'react-native-paper';
 import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import Counter from "react-native-counters";
 const Menu = ({menuVal,navigation}) => {
@@ -42,8 +42,7 @@ const Menu = ({menuVal,navigation}) => {
       setCartItems(newCartItemsJSON);
   }
   
-  return(   
-    <View>
+  return(       
     <List.Section title="Menu">{
     menuList.menu_sections.map((menuSection,index) => {      
       return (           
@@ -63,10 +62,11 @@ const Menu = ({menuVal,navigation}) => {
             </List.Accordion>            
               )            
           })
-        }</List.Section>                                   
-      <FAB style={styles.fab} label="Checkout" onPress={() => goToCheckout()}/> 
-      <Text>{"\n"}</Text> 
-      </View>
+        }
+        <Portal>
+            <FAB style={styles.fab} label="Checkout" onPress={() => goToCheckout()}/> 
+      </Portal>                                                      
+        </List.Section>       
       )      
   }
 export default Menu;
@@ -104,6 +104,11 @@ const styles = StyleSheet.create({
     price:{
       fontSize: 15,
       color: '#444',      
-    }
+    },fab: {
+      position: 'absolute',
+      margin: 16,
+      right: 0,
+      bottom: 0,
+    },
   });
   

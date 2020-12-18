@@ -1,6 +1,10 @@
-import React,{useRef,useState,useEffect} from 'react';
-import {View, Text, Image, StyleSheet,FlatList, TouchableOpacity} from 'react-native';
-const Checkout = ({route}) => {
+import React from 'react';
+import {View,ScrollView,StatusBar, Text, StyleSheet,FlatList} from 'react-native';
+import HeaderImageScrollView, {TriggeringView} from 'react-native-image-header-scroll-view';
+import { FAB,Appbar,Portal,Provider } from 'react-native-paper';
+const MIN_HEIGHT = Platform.OS === 'ios' ? 90 : 55;
+const MAX_HEIGHT = 350;
+const Checkout = ({route,navigation}) => {
     const orderJSON = route.params.orderJSON;    
     const totalPrice = route.params.totalPrice;     
     const order = JSON.parse(orderJSON);
@@ -15,16 +19,24 @@ const Checkout = ({route}) => {
             </View>
             </View>           
         );
-    }  
+    }
+
+    const goToPayment = () => {
+      navigation.navigate('PaymentScreen',{orderJSON:orderJSON});
+    }
   return(
-    <View style={styles.container}>
-        { <FlatList 
-            data={order}
-            renderItem={renderItem}
-            keyExtractor={item => item.name}
-        /> }
-        <Text style={styles.totalPriceText}>Total Price : {totalPrice ? totalPrice : 0}</Text>
-      </View>
+
+    <View style={styles.container}>              
+      <StatusBar barStyle="light-content" />
+      <Appbar.Header>
+          <Appbar.Content title="Your Order" />        
+      </Appbar.Header>      
+      { <FlatList  data={order} renderItem={renderItem} keyExtractor={item => item.name}/> }
+          <Text style={styles.totalPriceText}>Total Price : {totalPrice ? totalPrice : 0}</Text>                    
+          <Portal>
+          <FAB style={styles.fab} label="Proceed to Payment" onPress={() => goToPayment()}/> 
+          </Portal>                
+    </View>    
       )      
   }
 export default Checkout;
@@ -66,6 +78,12 @@ const styles = StyleSheet.create({
     totalPriceText:{
         fontSize:30,
       fontWeight:"bold"
+    },
+    fab: {
+      position: 'absolute',
+      margin: 16,
+      right: 0,
+      bottom: 0,
     },
   });
   

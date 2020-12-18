@@ -9,9 +9,7 @@ import {
   Platform,
   ScrollView
 } from 'react-native';
-import HeaderImageScrollView, {
-  TriggeringView,
-} from 'react-native-image-header-scroll-view';
+import HeaderImageScrollView, {TriggeringView} from 'react-native-image-header-scroll-view';
 
 import * as Animatable from 'react-native-animatable';
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
@@ -47,10 +45,10 @@ const CardItemDetails = ({navigation, route}) => {
           <Animatable.View style={styles.navTitleView} ref={navTitleView}>
             <Text style={styles.navTitle}>{itemData.restaurant_name}</Text>
           </Animatable.View>
-        )}>        
-        <Menu menuVal={itemData.menus} navigation={navigation}/>               
-      </HeaderImageScrollView>
-    </ScrollView>
+        )}>
+        <Menu menuVal={itemData.menus} navigation={navigation}/> 
+      </HeaderImageScrollView>           
+    </ScrollView>    
   );
 };
 
@@ -130,5 +128,5 @@ const styles = StyleSheet.create({
   },
   sectionLarge: {
     minHeight: 300,
-  },
+  },  
 });
