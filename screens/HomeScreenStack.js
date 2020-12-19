@@ -55,42 +55,76 @@ const HomeStackScreen = ({navigation}) => {
       <HomeStack.Screen 
         name="CardListScreen"
         component={CardListScreen}
-        options={({route}) => ({
-          title: route.params.title,
-          headerBackTitleVisible: false
-        })}
+        options={{
+          title: 'Restaurants',
+          headerLeft: () => (
+            <View style={{marginLeft: 10}}>
+              <Icon.Button
+                name="ios-menu"
+                size={25}
+                color={colors.text}
+                backgroundColor={colors.background}
+                onPress={() => navigation.openDrawer()}
+              />
+            </View>
+          )          
+        }}        
       />
       <HomeStack.Screen 
         name="CardItemDetails"
         component={CardItemDetails}
         options={({route}) => ({
-          // title: route.params.title,
+          title: "",
           headerBackTitleVisible: false,
-          headerTitle: false,
-          headerTransparent: true,
-          headerTintColor: '#fff'
+          headerLeft: () => (
+            <View style={{marginLeft: 10}}>
+              <Icon.Button
+                name="ios-menu"
+                size={25}
+                color={colors.text}
+                backgroundColor={colors.background}
+                onPress={() => navigation.openDrawer()}
+              />
+            </View>
+          )
         })}
       />
       <HomeStack.Screen 
         name="CheckoutScreen"
         component={CheckoutScreen}
         options={({route}) => ({
-          // title: route.params.title,
+          title: "Your Order",
           headerBackTitleVisible: false,
-          headerTitle: false,
-          headerTransparent: true,
-          headerTintColor: '#fff'
-        })}
+          headerLeft: () => (
+            <View style={{marginLeft: 10}}>
+              <Icon.Button
+                name="ios-menu"
+                size={25}
+                color={colors.text}
+                backgroundColor={colors.background}
+                onPress={() => navigation.openDrawer()}
+              />
+            </View>
+          )
+        })}        
       />
       <HomeStack.Screen 
         name="PaymentScreen"
-        component={PaymentScreen}
+        component={PaymentScreen}        
         options={({route}) => ({
-          // title: route.params.title,
+          title: "Payment",
           headerBackTitleVisible: false,
-          headerTitle: false,
-          headerTransparent: true,
-          headerTintColor: '#fff'
+          headerLeft: () => (
+            <View style={{marginLeft: 10}}>
+              <Icon.Button
+                name="ios-menu"
+                size={25}
+                color={colors.text}
+                backgroundColor={colors.background}
+                onPress={() => navigation.openDrawer()}
+              />
+            </View>
+          )
         })}
       />
       <HomeStack.Screen

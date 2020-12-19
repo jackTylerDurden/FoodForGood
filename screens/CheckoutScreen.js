@@ -1,5 +1,5 @@
 import React from 'react';
-import {View,StatusBar, StyleSheet,FlatList} from 'react-native';
+import {View,StatusBar, StyleSheet,FlatList,ScrollView} from 'react-native';
 import { FAB,Appbar,Portal,Paragraph,Text } from 'react-native-paper';
 const MIN_HEIGHT = Platform.OS === 'ios' ? 90 : 55;
 const MAX_HEIGHT = 350;
@@ -28,25 +28,20 @@ const Checkout = ({route,navigation}) => {
       navigation.navigate('PaymentScreen',{orderJSON:orderJSON});
     }
   return(
-
-    <View style={styles.container}>              
+    <View style={styles.container}>
       <StatusBar barStyle="light-content" />
-      <Appbar.Header>
-          <Appbar.Content title="Your Order" />        
-      </Appbar.Header>      
       { <FlatList  data={order} renderItem={renderItem} keyExtractor={item => item.name}/> }      
-          <Text style={styles.totalPriceText}>Total Price : {totalPrice ? totalPrice : 0}</Text>                    
-          <Portal>
-          <FAB style={styles.fab} label="Proceed to Payment" onPress={() => goToPayment()}/> 
-          </Portal>                
-    </View>    
+          <View style={{ borderBottomColor: 'black', borderBottomWidth: 1, }}/>
+           <Text style={styles.totalPriceText}>Total Price : {totalPrice ? totalPrice : 0}</Text>                    
+           <FAB style={styles.fab} label="Proceed to Payment" onPress={() => goToPayment()}/> 
+    </View>
       )      
   }
 export default Checkout;
 const styles = StyleSheet.create({
     card: {
-      height: 100,
-      marginVertical: 25,
+      height: 10,
+      marginVertical: 35,
       marginLeft:20,
       marginRight:10,
       flexDirection: 'row',
@@ -59,15 +54,16 @@ const styles = StyleSheet.create({
     },    
     cardTitle: {
       fontWeight: 'bold',
+      fontSize: 16,
     },
     quantity:{
       fontSize: 22,
       color: '#444',
-      width:12,
+      width:25,
       alignSelf:'center',
     },
     menuItem:{
-      width:300,
+      width:200,
       alignSelf:'center',      
     },
 
@@ -76,19 +72,23 @@ const styles = StyleSheet.create({
       color: '#444',
     },
     price:{
-      fontSize: 15,
+      fontSize: 25,
       color: '#444',
       alignSelf:'center'
     },
     totalPriceText:{
         fontSize:30,
-      fontWeight:"bold"
+      fontWeight:"bold",
+      margin:16
     },
     fab: {
-      position: 'absolute',
+      position: 'relative',
       margin: 16,
       right: 0,
       bottom: 0,
     },
+    container: {
+      flex: 1,             
+    }
   });
   

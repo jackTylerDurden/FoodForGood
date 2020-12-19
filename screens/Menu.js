@@ -17,8 +17,14 @@ const Menu = ({menuVal,navigation}) => {
       setTotalPrice(newTotalPrice);      
   },[cartItemsJSON]);
 
-  const goToCheckout = () => {    
-    navigation.navigate('CheckoutScreen', {orderJSON: cartItemsJSON,totalPrice:totalPrice});    
+  const goToCheckout = () => {
+    console.log('totalPrice--->>>',totalPrice)
+    if(totalPrice == 0){
+      alert('Please add some items to your cart');
+    }else{
+      let preciseTotalPrice = totalPrice.toPrecision(4);
+      navigation.navigate('CheckoutScreen', {orderJSON: cartItemsJSON,totalPrice:preciseTotalPrice});    
+    }        
   }
   const addToCart = (quantity,menuItem) => {            
       menuItem.quantity = quantity;
@@ -42,7 +48,8 @@ const Menu = ({menuVal,navigation}) => {
       setCartItems(newCartItemsJSON);
   }
   
-  return(       
+  return(    
+    <View>
     <List.Section title="Menu">{
     menuList.menu_sections.map((menuSection,index) => {      
       return (           
@@ -63,11 +70,10 @@ const Menu = ({menuVal,navigation}) => {
             </List.Accordion>            
               )            
           })
-        }
-        <Portal>
-            <FAB style={styles.fab} label="Checkout" onPress={() => goToCheckout()}/> 
-      </Portal>                                                      
-        </List.Section>       
+        }                
+        </List.Section>
+        <FAB style={styles.fab} label="Checkout" onPress={() => goToCheckout()}/>       
+        </View>   
       )      
   }
 export default Menu;
@@ -105,8 +111,9 @@ const styles = StyleSheet.create({
     price:{
       fontSize: 15,
       color: '#444',      
-    },fab: {
-      position: 'absolute',
+    },
+    fab: {
+      position: 'relative',
       margin: 16,
       right: 0,
       bottom: 0,

@@ -9,15 +9,13 @@ import {
   Platform,
   ScrollView
 } from 'react-native';
-import HeaderImageScrollView, {TriggeringView} from 'react-native-image-header-scroll-view';
+import HeaderImageScrollView from 'react-native-image-header-scroll-view';
 
 import * as Animatable from 'react-native-animatable';
-import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Menu from '../screens/Menu';
 
 const MIN_HEIGHT = Platform.OS === 'ios' ? 90 : 55;
-const MAX_HEIGHT = 350;
+const MAX_HEIGHT = 300;
 
 const CardItemDetails = ({navigation, route}) => {
   const itemData = route.params.itemData;
@@ -32,8 +30,7 @@ const CardItemDetails = ({navigation, route}) => {
         minHeight={MIN_HEIGHT}
         maxOverlayOpacity={0.6}
         minOverlayOpacity={0.3}
-        renderHeader={() => (
-          // <Image source={itemData.image} style={styles.image} />
+        renderHeader={() => (          
           <Image source={{uri:itemData.imageUrl}} style={styles.image} />
         )}
         renderForeground={() => (
@@ -46,7 +43,7 @@ const CardItemDetails = ({navigation, route}) => {
             <Text style={styles.navTitle}>{itemData.restaurant_name}</Text>
           </Animatable.View>
         )}>
-        <Menu menuVal={itemData.menus} navigation={navigation}/> 
+        <Menu menuVal={itemData.menus} navigation={navigation}/>         
       </HeaderImageScrollView>           
     </ScrollView>    
   );

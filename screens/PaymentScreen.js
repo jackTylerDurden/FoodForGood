@@ -1,15 +1,30 @@
-import React from 'react';
-import {View, Text, StyleSheet,FlatList} from 'react-native';
-import { FAB } from 'react-native-paper';
+import React,{useState} from 'react';
+import {View,StyleSheet,Alert} from 'react-native';
+import { FAB,Portal} from 'react-native-paper';
+import { CreditCardInput, LiteCreditCardInput } from "react-native-credit-card-input";
 const Payment = ({navigation,route}) => {  
-    console.log('route----->>>',route.params.orderJSON);
-    const placeOrder = () => {
-        alert('thanks for your order. Your food will be delivered shortly');
+    const [cardDetails,setCardDetails] = useState({})    
+    const placeOrder = () => {        
+        if(cardDetails.valid){
+          Alert.alert(
+            "Food For Good",
+            "Thank you for your order. Your food will be at your doorstep shortly.",
+            [              
+              { text: "OK", onPress: () => navigation.navigate('Home')}
+            ],            
+          );          
+        }else{
+          alert('Please enter valid card details');
+        }
+        
     }
   return(
-    <View style={styles.container}>        
-        <FAB style={styles.fab} label="Place order" onPress={() => placeOrder()}/> 
-    </View>
+    <View style={styles.container}>      
+      <CreditCardInput onChange={(value) => {setCardDetails(value)}} />      
+       <Portal>
+          <FAB style={styles.fab} small label="Place order" onPress={() => placeOrder()}/>
+      </Portal>
+    </View>    
       )      
   }
 export default Payment;
@@ -52,5 +67,18 @@ const styles = StyleSheet.create({
         fontSize:30,
       fontWeight:"bold"
     },
+    fab: {
+      position: 'relative',
+      marginTop: 350,
+      margin:16,
+      right: 0,
+      bottom: 0,
+    },
+    container: {
+      flex: 1, 
+      width: '90%',
+      alignSelf: 'center'
+    }
+    
   });
   
