@@ -30,6 +30,7 @@ Same credentials can be used to access Gmail,Documenu and Yelp Apis.
     So while searching the restaurants based on the US state they are situated in, you have to use state code and not the state string.
       e.g. You have to use CA instead of California.  The states code list can be found in [USState.json](assets/USState.json) under assets folder.
 4. Since we have opted for free plan for the [Documenu api](https://documenu.com/) we get to fire **500 api requests per account**. So we haven't implemented the pagination functionality for restaurant search. You can check the api consumption count at [Documenu Dashboard](https://documenu.com/dashboard) using the credentials mentioned above.
+5. If Login from firebase is not working, please login using one of the users from [users.js](/model/user.js);
 
 ## Screens
 1. ![1](/assets/Pic_1.jpg)
