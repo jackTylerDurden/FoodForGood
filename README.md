@@ -1,9 +1,9 @@
 ## Team Members
-Name - Pooja Rajendra Pawar
-RedId - 824645686
+Name - Pooja Rajendra Pawar  
+RedId - **824645686**
 
-Name - Tanmay Pravin Deshpande
-RedId - 824646024
+Name - Tanmay Pravin Deshpande  
+RedId - **824646024**
 
 ## Description
 **Food For Good** is an app built in *react native* which lets you order food from restaurants accross the US. Restaurants can be searched on the basis of their name, city, state code and zip code. You can search the restaurants, go throught their menus, add food items to the cart and order them.
