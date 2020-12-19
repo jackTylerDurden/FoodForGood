@@ -17,8 +17,9 @@ To get the restaurant info we are consuming following apis
 2. [Yelp Fusion Api](https://www.yelp.com/developers/documentation/v3) - to get restaurant photos, ratings, review count, price range.
 
 ## Credentials for third party apis
-You can check these apis with following credentials  *username - nativereact.sdsu@gmail.com*
-  *password - Test@12345*
+You can check these apis with following credentials  
+**username - nativereact.sdsu@gmail.com**
+**password - Test@12345**
 Same credentials can be used to access Gmail,Documenu and Yelp Apis.
 
 ## Known issues / Limitations
