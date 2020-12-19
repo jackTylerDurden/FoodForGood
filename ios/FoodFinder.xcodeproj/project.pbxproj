@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* FoodFinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* FoodFinderTests.m */; };
-		0C50815FB63B5CA52A7DC1F5 /* libPods-FoodFinder-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C829761A826623EB3CB2CC0E /* libPods-FoodFinder-tvOS.a */; };
+		00E356F31AD99517003FC87E /* foodforgoodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* foodforgoodTests.m */; };
+		0C50815FB63B5CA52A7DC1F5 /* libPods-foodforgood-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C829761A826623EB3CB2CC0E /* libPods-foodforgood-tvOS.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2ADC748377626B93CA1F2256 /* libPods-FoodFinder-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C957F541262345E7DB7D2243 /* libPods-FoodFinder-tvOSTests.a */; };
+		2ADC748377626B93CA1F2256 /* libPods-foodforgood-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C957F541262345E7DB7D2243 /* libPods-foodforgood-tvOSTests.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* FoodFinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* FoodFinderTests.m */; };
-		2E569DCCEF16798E2D28DF4C /* libPods-FoodFinder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFA9ED7E01D46DCC9C8099FC /* libPods-FoodFinder.a */; };
-		3DD9E7895713343D5562B3D2 /* libPods-FoodFinder-FoodFinderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF5CE18BADFAFA6571686DB /* libPods-FoodFinder-FoodFinderTests.a */; };
+		2DCD954D1E0B4F2C00145EB5 /* foodforgoodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* foodforgoodTests.m */; };
+		2E569DCCEF16798E2D28DF4C /* libPods-foodforgood.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFA9ED7E01D46DCC9C8099FC /* libPods-foodforgood.a */; };
+		3DD9E7895713343D5562B3D2 /* libPods-foodforgood-foodforgoodTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF5CE18BADFAFA6571686DB /* libPods-foodforgood-foodforgoodTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,45 +28,45 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = FoodFinder;
+			remoteInfo = foodforgood;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "FoodFinder-tvOS";
+			remoteInfo = "foodforgood-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* FoodFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* foodforgoodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = foodforgoodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* FoodFinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodFinderTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* FoodFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = FoodFinder/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = FoodFinder/AppDelegate.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* foodforgoodTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = foodforgoodTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* foodforgood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodforgood.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = foodforgood/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = foodforgood/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = FoodFinder/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = FoodFinder/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = FoodFinder/main.m; sourceTree = "<group>"; };
-		1BF5CE18BADFAFA6571686DB /* libPods-FoodFinder-FoodFinderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodFinder-FoodFinderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E47B1E0B4A5D006451C7 /* FoodFinder-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FoodFinder-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* FoodFinder-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FoodFinder-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D1B5554DAD623082B1993D7 /* Pods-FoodFinder-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFinder-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-FoodFinder-tvOS/Pods-FoodFinder-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		7871943666471D9DBA3376C3 /* Pods-FoodFinder-FoodFinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFinder-FoodFinderTests.debug.xcconfig"; path = "Target Support Files/Pods-FoodFinder-FoodFinderTests/Pods-FoodFinder-FoodFinderTests.debug.xcconfig"; sourceTree = "<group>"; };
-		81AFADC7ED7090874F5B141F /* Pods-FoodFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFinder.release.xcconfig"; path = "Target Support Files/Pods-FoodFinder/Pods-FoodFinder.release.xcconfig"; sourceTree = "<group>"; };
-		9DE69F7CF7140F9C9696B173 /* Pods-FoodFinder-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFinder-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-FoodFinder-tvOSTests/Pods-FoodFinder-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		A8FEA7966218F8C3307151B1 /* Pods-FoodFinder-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFinder-tvOS.release.xcconfig"; path = "Target Support Files/Pods-FoodFinder-tvOS/Pods-FoodFinder-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		B951AAFD1474FCD152D2302C /* Pods-FoodFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFinder.debug.xcconfig"; path = "Target Support Files/Pods-FoodFinder/Pods-FoodFinder.debug.xcconfig"; sourceTree = "<group>"; };
-		C829761A826623EB3CB2CC0E /* libPods-FoodFinder-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodFinder-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C957F541262345E7DB7D2243 /* libPods-FoodFinder-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodFinder-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CAB42F71B48A4D09F2A5C7F9 /* Pods-FoodFinder-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFinder-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-FoodFinder-tvOSTests/Pods-FoodFinder-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D670A18DDF95C75CACCA1F21 /* Pods-FoodFinder-FoodFinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFinder-FoodFinderTests.release.xcconfig"; path = "Target Support Files/Pods-FoodFinder-FoodFinderTests/Pods-FoodFinder-FoodFinderTests.release.xcconfig"; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = foodforgood/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = foodforgood/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = foodforgood/main.m; sourceTree = "<group>"; };
+		1BF5CE18BADFAFA6571686DB /* libPods-foodforgood-foodforgoodTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-foodforgood-foodforgoodTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E47B1E0B4A5D006451C7 /* foodforgood-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "foodforgood-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* foodforgood-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "foodforgood-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D1B5554DAD623082B1993D7 /* Pods-foodforgood-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodforgood-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-foodforgood-tvOS/Pods-foodforgood-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		7871943666471D9DBA3376C3 /* Pods-foodforgood-foodforgoodTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodforgood-foodforgoodTests.debug.xcconfig"; path = "Target Support Files/Pods-foodforgood-foodforgoodTests/Pods-foodforgood-foodforgoodTests.debug.xcconfig"; sourceTree = "<group>"; };
+		81AFADC7ED7090874F5B141F /* Pods-foodforgood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodforgood.release.xcconfig"; path = "Target Support Files/Pods-foodforgood/Pods-foodforgood.release.xcconfig"; sourceTree = "<group>"; };
+		9DE69F7CF7140F9C9696B173 /* Pods-foodforgood-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodforgood-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-foodforgood-tvOSTests/Pods-foodforgood-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		A8FEA7966218F8C3307151B1 /* Pods-foodforgood-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodforgood-tvOS.release.xcconfig"; path = "Target Support Files/Pods-foodforgood-tvOS/Pods-foodforgood-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		B951AAFD1474FCD152D2302C /* Pods-foodforgood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodforgood.debug.xcconfig"; path = "Target Support Files/Pods-foodforgood/Pods-foodforgood.debug.xcconfig"; sourceTree = "<group>"; };
+		C829761A826623EB3CB2CC0E /* libPods-foodforgood-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-foodforgood-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C957F541262345E7DB7D2243 /* libPods-foodforgood-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-foodforgood-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAB42F71B48A4D09F2A5C7F9 /* Pods-foodforgood-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodforgood-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-foodforgood-tvOSTests/Pods-foodforgood-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D670A18DDF95C75CACCA1F21 /* Pods-foodforgood-foodforgoodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodforgood-foodforgoodTests.release.xcconfig"; path = "Target Support Files/Pods-foodforgood-foodforgoodTests/Pods-foodforgood-foodforgoodTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		FFA9ED7E01D46DCC9C8099FC /* libPods-FoodFinder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodFinder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFA9ED7E01D46DCC9C8099FC /* libPods-foodforgood.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-foodforgood.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DD9E7895713343D5562B3D2 /* libPods-FoodFinder-FoodFinderTests.a in Frameworks */,
+				3DD9E7895713343D5562B3D2 /* libPods-foodforgood-foodforgoodTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E569DCCEF16798E2D28DF4C /* libPods-FoodFinder.a in Frameworks */,
+				2E569DCCEF16798E2D28DF4C /* libPods-foodforgood.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C50815FB63B5CA52A7DC1F5 /* libPods-FoodFinder-tvOS.a in Frameworks */,
+				0C50815FB63B5CA52A7DC1F5 /* libPods-foodforgood-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,20 +98,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2ADC748377626B93CA1F2256 /* libPods-FoodFinder-tvOSTests.a in Frameworks */,
+				2ADC748377626B93CA1F2256 /* libPods-foodforgood-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* FoodFinderTests */ = {
+		00E356EF1AD99517003FC87E /* foodforgoodTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* FoodFinderTests.m */,
+				00E356F21AD99517003FC87E /* foodforgoodTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = FoodFinderTests;
+			path = foodforgoodTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -122,7 +122,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* FoodFinder */ = {
+		13B07FAE1A68108700A75B9A /* foodforgood */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -133,7 +133,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = FoodFinder;
+			name = foodforgood;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -141,10 +141,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				FFA9ED7E01D46DCC9C8099FC /* libPods-FoodFinder.a */,
-				1BF5CE18BADFAFA6571686DB /* libPods-FoodFinder-FoodFinderTests.a */,
-				C829761A826623EB3CB2CC0E /* libPods-FoodFinder-tvOS.a */,
-				C957F541262345E7DB7D2243 /* libPods-FoodFinder-tvOSTests.a */,
+				FFA9ED7E01D46DCC9C8099FC /* libPods-foodforgood.a */,
+				1BF5CE18BADFAFA6571686DB /* libPods-foodforgood-foodforgoodTests.a */,
+				C829761A826623EB3CB2CC0E /* libPods-foodforgood-tvOS.a */,
+				C957F541262345E7DB7D2243 /* libPods-foodforgood-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,14 +152,14 @@
 		82C0377F169E2C0A6E30B520 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B951AAFD1474FCD152D2302C /* Pods-FoodFinder.debug.xcconfig */,
-				81AFADC7ED7090874F5B141F /* Pods-FoodFinder.release.xcconfig */,
-				7871943666471D9DBA3376C3 /* Pods-FoodFinder-FoodFinderTests.debug.xcconfig */,
-				D670A18DDF95C75CACCA1F21 /* Pods-FoodFinder-FoodFinderTests.release.xcconfig */,
-				6D1B5554DAD623082B1993D7 /* Pods-FoodFinder-tvOS.debug.xcconfig */,
-				A8FEA7966218F8C3307151B1 /* Pods-FoodFinder-tvOS.release.xcconfig */,
-				CAB42F71B48A4D09F2A5C7F9 /* Pods-FoodFinder-tvOSTests.debug.xcconfig */,
-				9DE69F7CF7140F9C9696B173 /* Pods-FoodFinder-tvOSTests.release.xcconfig */,
+				B951AAFD1474FCD152D2302C /* Pods-foodforgood.debug.xcconfig */,
+				81AFADC7ED7090874F5B141F /* Pods-foodforgood.release.xcconfig */,
+				7871943666471D9DBA3376C3 /* Pods-foodforgood-foodforgoodTests.debug.xcconfig */,
+				D670A18DDF95C75CACCA1F21 /* Pods-foodforgood-foodforgoodTests.release.xcconfig */,
+				6D1B5554DAD623082B1993D7 /* Pods-foodforgood-tvOS.debug.xcconfig */,
+				A8FEA7966218F8C3307151B1 /* Pods-foodforgood-tvOS.release.xcconfig */,
+				CAB42F71B48A4D09F2A5C7F9 /* Pods-foodforgood-tvOSTests.debug.xcconfig */,
+				9DE69F7CF7140F9C9696B173 /* Pods-foodforgood-tvOSTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -175,9 +175,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* FoodFinder */,
+				13B07FAE1A68108700A75B9A /* foodforgood */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* FoodFinderTests */,
+				00E356EF1AD99517003FC87E /* foodforgoodTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				82C0377F169E2C0A6E30B520 /* Pods */,
@@ -190,10 +190,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* FoodFinder.app */,
-				00E356EE1AD99517003FC87E /* FoodFinderTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* FoodFinder-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* FoodFinder-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* foodforgood.app */,
+				00E356EE1AD99517003FC87E /* foodforgoodTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* foodforgood-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* foodforgood-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,9 +201,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* FoodFinderTests */ = {
+		00E356ED1AD99517003FC87E /* foodforgoodTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "FoodFinderTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "foodforgoodTests" */;
 			buildPhases = (
 				A0A0BAB923E5B6900DAD8414 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -216,14 +216,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = FoodFinderTests;
-			productName = FoodFinderTests;
-			productReference = 00E356EE1AD99517003FC87E /* FoodFinderTests.xctest */;
+			name = foodforgoodTests;
+			productName = foodforgoodTests;
+			productReference = 00E356EE1AD99517003FC87E /* foodforgoodTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* FoodFinder */ = {
+		13B07F861A680F5B00A75B9A /* foodforgood */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "FoodFinder" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "foodforgood" */;
 			buildPhases = (
 				4D5E297994BFFC3261F63465 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -237,14 +237,14 @@
 			);
 			dependencies = (
 			);
-			name = FoodFinder;
-			productName = FoodFinder;
-			productReference = 13B07F961A680F5B00A75B9A /* FoodFinder.app */;
+			name = foodforgood;
+			productName = foodforgood;
+			productReference = 13B07F961A680F5B00A75B9A /* foodforgood.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* FoodFinder-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* foodforgood-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "FoodFinder-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "foodforgood-tvOS" */;
 			buildPhases = (
 				4DFB8203D540DB4BCCB16B4D /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -257,14 +257,14 @@
 			);
 			dependencies = (
 			);
-			name = "FoodFinder-tvOS";
-			productName = "FoodFinder-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* FoodFinder-tvOS.app */;
+			name = "foodforgood-tvOS";
+			productName = "foodforgood-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* foodforgood-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* FoodFinder-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* foodforgood-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "FoodFinder-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "foodforgood-tvOSTests" */;
 			buildPhases = (
 				05FC6DEFBDCB3FD53527B34E /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -276,9 +276,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "FoodFinder-tvOSTests";
-			productName = "FoodFinder-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* FoodFinder-tvOSTests.xctest */;
+			name = "foodforgood-tvOSTests";
+			productName = "foodforgood-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* foodforgood-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -307,7 +307,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "FoodFinder" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "foodforgood" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -320,10 +320,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* FoodFinder */,
-				00E356ED1AD99517003FC87E /* FoodFinderTests */,
-				2D02E47A1E0B4A5D006451C7 /* FoodFinder-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* FoodFinder-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* foodforgood */,
+				00E356ED1AD99517003FC87E /* foodforgoodTests */,
+				2D02E47A1E0B4A5D006451C7 /* foodforgood-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* foodforgood-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -392,7 +392,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FoodFinder-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-foodforgood-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -405,7 +405,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FoodFinder-FoodFinderTests/Pods-FoodFinder-FoodFinderTests-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-foodforgood-foodforgoodTests/Pods-foodforgood-foodforgoodTests-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/RNImageCropPicker/QBImagePicker.bundle",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
@@ -450,7 +450,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FoodFinder-FoodFinderTests/Pods-FoodFinder-FoodFinderTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-foodforgood-foodforgoodTests/Pods-foodforgood-foodforgoodTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1F71E3F33D56FD8EF7ADB2B1 /* [CP] Copy Pods Resources */ = {
@@ -459,7 +459,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FoodFinder/Pods-FoodFinder-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-foodforgood/Pods-foodforgood-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/RNImageCropPicker/QBImagePicker.bundle",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
@@ -504,7 +504,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FoodFinder/Pods-FoodFinder-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-foodforgood/Pods-foodforgood-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
@@ -536,7 +536,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FoodFinder-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-foodforgood-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -558,7 +558,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FoodFinder-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-foodforgood-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -580,7 +580,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FoodFinder-FoodFinderTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-foodforgood-foodforgoodTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -632,7 +632,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* FoodFinderTests.m in Sources */,
+				00E356F31AD99517003FC87E /* foodforgoodTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,7 +658,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* FoodFinderTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* foodforgoodTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,12 +667,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* FoodFinder */;
+			target = 13B07F861A680F5B00A75B9A /* foodforgood */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* FoodFinder-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* foodforgood-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -684,7 +684,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = FoodFinder;
+			path = foodforgood;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -692,14 +692,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7871943666471D9DBA3376C3 /* Pods-FoodFinder-FoodFinderTests.debug.xcconfig */;
+			baseConfigurationReference = 7871943666471D9DBA3376C3 /* Pods-foodforgood-foodforgoodTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = FoodFinderTests/Info.plist;
+				INFOPLIST_FILE = foodforgoodTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -709,17 +709,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoodFinder.app/FoodFinder";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/foodforgood.app/foodforgood";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D670A18DDF95C75CACCA1F21 /* Pods-FoodFinder-FoodFinderTests.release.xcconfig */;
+			baseConfigurationReference = D670A18DDF95C75CACCA1F21 /* Pods-foodforgood-foodforgoodTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = FoodFinderTests/Info.plist;
+				INFOPLIST_FILE = foodforgoodTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -729,13 +729,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoodFinder.app/FoodFinder";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/foodforgood.app/foodforgood";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B951AAFD1474FCD152D2302C /* Pods-FoodFinder.debug.xcconfig */;
+			baseConfigurationReference = B951AAFD1474FCD152D2302C /* Pods-foodforgood.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -745,7 +745,7 @@
 					"$(inherited)",
 					"FB_SONARKIT_ENABLED=1",
 				);
-				INFOPLIST_FILE = FoodFinder/Info.plist;
+				INFOPLIST_FILE = foodforgood/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -753,7 +753,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = FoodFinder;
+				PRODUCT_NAME = foodforgood;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -762,12 +762,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81AFADC7ED7090874F5B141F /* Pods-FoodFinder.release.xcconfig */;
+			baseConfigurationReference = 81AFADC7ED7090874F5B141F /* Pods-foodforgood.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = FoodFinder/Info.plist;
+				INFOPLIST_FILE = foodforgood/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -775,7 +775,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = FoodFinder;
+				PRODUCT_NAME = foodforgood;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -783,7 +783,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6D1B5554DAD623082B1993D7 /* Pods-FoodFinder-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 6D1B5554DAD623082B1993D7 /* Pods-foodforgood-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -794,14 +794,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "FoodFinder-tvOS/Info.plist";
+				INFOPLIST_FILE = "foodforgood-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.FoodFinder-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.foodforgood-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -811,7 +811,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A8FEA7966218F8C3307151B1 /* Pods-FoodFinder-tvOS.release.xcconfig */;
+			baseConfigurationReference = A8FEA7966218F8C3307151B1 /* Pods-foodforgood-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -822,14 +822,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "FoodFinder-tvOS/Info.plist";
+				INFOPLIST_FILE = "foodforgood-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.FoodFinder-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.foodforgood-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -839,7 +839,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAB42F71B48A4D09F2A5C7F9 /* Pods-FoodFinder-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = CAB42F71B48A4D09F2A5C7F9 /* Pods-foodforgood-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -849,24 +849,24 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "FoodFinder-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "foodforgood-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.FoodFinder-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.foodforgood-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoodFinder-tvOS.app/FoodFinder-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/foodforgood-tvOS.app/foodforgood-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9DE69F7CF7140F9C9696B173 /* Pods-FoodFinder-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 9DE69F7CF7140F9C9696B173 /* Pods-foodforgood-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -876,17 +876,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "FoodFinder-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "foodforgood-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.FoodFinder-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.foodforgood-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoodFinder-tvOS.app/FoodFinder-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/foodforgood-tvOS.app/foodforgood-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -1007,7 +1007,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "FoodFinderTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "foodforgoodTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -1016,7 +1016,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "FoodFinder" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "foodforgood" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -1025,7 +1025,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "FoodFinder-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "foodforgood-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -1034,7 +1034,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "FoodFinder-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "foodforgood-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -1043,7 +1043,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "FoodFinder" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "foodforgood" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

@@ -129,7 +129,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.foodfinder"
+        applicationId "com.foodforgood"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

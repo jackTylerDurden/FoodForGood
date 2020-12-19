@@ -18,7 +18,7 @@ const ProfileScreen = () => {
 
   const myCustomShare = async() => {
     const shareOptions = {
-      message: 'Order your next meal from FoodFinder App. I\'ve already ordered more than 10 meals on it.',
+      message: 'Order your next meal from foodforgood App. I\'ve already ordered more than 10 meals on it.',
       url: files.appLogo,
       // urls: [files.image1, files.image2]
     }

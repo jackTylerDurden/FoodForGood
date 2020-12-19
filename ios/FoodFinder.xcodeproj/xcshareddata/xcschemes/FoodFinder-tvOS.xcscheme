@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "FoodFinder-tvOS.app"
-               BlueprintName = "FoodFinder-tvOS"
-               ReferencedContainer = "container:FoodFinder.xcodeproj">
+               BuildableName = "foodforgood-tvOS.app"
+               BlueprintName = "foodforgood-tvOS"
+               ReferencedContainer = "container:foodforgood.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "FoodFinder-tvOSTests.xctest"
-               BlueprintName = "FoodFinder-tvOSTests"
-               ReferencedContainer = "container:FoodFinder.xcodeproj">
+               BuildableName = "foodforgood-tvOSTests.xctest"
+               BlueprintName = "foodforgood-tvOSTests"
+               ReferencedContainer = "container:foodforgood.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "FoodFinder-tvOS.app"
-            BlueprintName = "FoodFinder-tvOS"
-            ReferencedContainer = "container:FoodFinder.xcodeproj">
+            BuildableName = "foodforgood-tvOS.app"
+            BlueprintName = "foodforgood-tvOS"
+            ReferencedContainer = "container:foodforgood.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "FoodFinder-tvOS.app"
-            BlueprintName = "FoodFinder-tvOS"
-            ReferencedContainer = "container:FoodFinder.xcodeproj">
+            BuildableName = "foodforgood-tvOS.app"
+            BlueprintName = "foodforgood-tvOS"
+            ReferencedContainer = "container:foodforgood.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
