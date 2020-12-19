@@ -1,7 +1,9 @@
-const documenuApiKey = '8cdb97c14d7e9ad10a1a82a86e4cba32';
+// const documenuApiKey = '8cdb97c14d7e9ad10a1a82a86e4cba32';
+const documenuApiKey = 'eb01040e1613c7eee417843076d6729a';
 const documenuEndpoint = 'https://api.documenu.com/v2';
 const yelpEndPoint = 'https://api.yelp.com/v3/businesses/';
-const yelpBearerToken = 'VGO9NNe6eQYJ6VKl8GrgZ04q6VB5oIH7UhIOXCQX8WhmlV6EtRZVaz0aAJO38WgGTeQnNgbJuyLq1K2rCW8fDf83Ez6TkWrvxb6F7gDsKLw52CE0l85I1QZUL_HBX3Yx';
+// const yelpBearerToken = 'VGO9NNe6eQYJ6VKl8GrgZ04q6VB5oIH7UhIOXCQX8WhmlV6EtRZVaz0aAJO38WgGTeQnNgbJuyLq1K2rCW8fDf83Ez6TkWrvxb6F7gDsKLw52CE0l85I1QZUL_HBX3Yx';
+const yelpBearerToken = '7KciKpMTFspGa0dVQHkIJ7HSDW16rqoM1sraXVp7HR1skLZLcVGswlg4DZT1w_x2GqTmO-rH0roWD4smNQ7aEuVGHybqW1Dg96xxk6CAM8lFU8GXjWgkNB_EBmTdX3Yx';
 
 export const fetchRestaurantOtherInfo = async (paramsJSON) => {
   const params = JSON.parse(paramsJSON);
