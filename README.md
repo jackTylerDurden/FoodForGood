@@ -25,11 +25,7 @@ Same credentials can be used to access Gmail,Documenu and Yelp Apis.
 ## Known issues / Limitations
 1. As of now we haven't integrated this with a payment gateway.
 2. The Documenu api doesn't provide the functionality of sorting restaurants based on their rating or price. 
-3. Since we are using react native version *"^0.63.4"*, the Picker widget is made deprecated. So we tried to implement a dropdown list of US states but were unable to do so. We tried to install it from  [@react-native-picker/picker npm package](https://github.com/react-native-picker/picker)
-
-We came accross following error  "Error: Unable to resolve module 'react-native-web/dist/modules/UnimplementedView' from 'node_modules\@react-native-picker\picker\js\PickerIOS.js: react-native-web/dist/modules/UnimplementedView could not be found within the project."
-
-so while searching the restaurants based on the US state they are situated in, you have to use state code and not the state string. e.g. You have to use CA instead of California. The states code list can be found in USState.json under assets folder.
+3. Since we are using react native version *"^0.63.4"*, the Picker widget is made deprecated. So we tried to implement a dropdown list of US states but were unable to do so. We tried to install it from  [@react-native-picker/picker npm package](https://github.com/react-native-picker/picker)  We came accross following error  "Error: Unable to resolve module 'react-native-web/dist/modules/UnimplementedView' from 'node_modules\@react-native-picker\picker\js\PickerIOS.js: react-native-web/dist/modules/UnimplementedView could not be found within the project."  so while searching the restaurants based on the US state they are situated in, you have to use state code and not the state string. e.g. You have to use CA instead of California. The states code list can be found in USState.json under assets folder.
 4. Since we have opted for free plan for the [Documenu api](https://documenu.com/) we get to fire **500 api requests per account**. So we haven't implemented the pagination functionality for restaurant search. You can check the api consumption count at [Documenu Dashboard](https://documenu.com/dashboard) using the credentials mentioned above.
 
 ## Screens
