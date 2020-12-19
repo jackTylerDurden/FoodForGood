@@ -1,6 +1,5 @@
 import React from 'react';
-import {View,ScrollView,StatusBar, StyleSheet,FlatList} from 'react-native';
-import HeaderImageScrollView, {TriggeringView} from 'react-native-image-header-scroll-view';
+import {View,StatusBar, StyleSheet,FlatList} from 'react-native';
 import { FAB,Appbar,Portal,Paragraph,Text } from 'react-native-paper';
 const MIN_HEIGHT = Platform.OS === 'ios' ? 90 : 55;
 const MAX_HEIGHT = 350;

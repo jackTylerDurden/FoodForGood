@@ -1,4 +1,4 @@
-import React,{useRef,useState,useEffect} from 'react';
+import React,{useState,useEffect} from 'react';
 import { View, Text, Button, FlatList,Title, StyleSheet,ActivityIndicator} from 'react-native';
 import Card from '../components/Card';
 import  {fetchRestaurants}   from '../Api.js';
