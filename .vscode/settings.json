@@ -1,7 +1,0 @@
-{
-    "eslint.codeAction.showDocumentation": {
-
-        "enable": false,
-        "eslint.enable": false
-    }
-}
